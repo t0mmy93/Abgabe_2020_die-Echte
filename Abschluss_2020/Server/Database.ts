@@ -15,7 +15,11 @@ let students: Mongo.Collection;
 // running on heroku?
 if (process.env.NODE_ENV == "production") {
     //    databaseURL = "mongodb://username:password@hostname:port/database";
+<<<<<<< HEAD
     databaseURL = "Verlinken";
+=======
+    databaseURL = "verlinken";
+>>>>>>> 590ee808a333886ebf55b4ccfaaa342e9f06dfb8
     databaseName = "testtest";
 }
 
