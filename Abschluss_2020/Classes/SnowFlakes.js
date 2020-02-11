@@ -1,9 +1,6 @@
 var Endaufgabe;
 (function (Endaufgabe) {
     class SnowFlake extends Endaufgabe.Moving {
-        /*constructor() {
-            super();
-        }*/
         move() {
             this.y += this.speed;
             if (this.y > Endaufgabe.crc2.canvas.height + 2) {
