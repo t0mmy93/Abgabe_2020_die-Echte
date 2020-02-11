@@ -4,7 +4,6 @@ var Endaufgabe;
     let imgData;
     let fps = 25;
     Endaufgabe.score = 0;
-    let timer = 60;
     let snowFlakes = [];
     Endaufgabe.birds = [];
     Endaufgabe.snowballs = [];
@@ -12,7 +11,6 @@ var Endaufgabe;
     Endaufgabe.kekse = [];
     let kekseLeft = 3;
     let ended = false;
-    //  let timercanceller: NodeJS.Timer;
     function preInit() {
         document.getElementById("start").addEventListener("click", init);
         document.getElementById("restart").addEventListener("click", init);
@@ -20,7 +18,6 @@ var Endaufgabe;
     function init(_event) {
         fps = 25;
         Endaufgabe.score = 0;
-        timer = 60;
         snowFlakes = [];
         Endaufgabe.birds = [];
         Endaufgabe.snowballs = [];
@@ -31,8 +28,6 @@ var Endaufgabe;
         document.getElementById("overlay").style.display = "block";
         document.getElementsByTagName("canvas")[0].style.display = "block";
         ended = false;
-        //  timercanceller = setInterval(decreaseTimer, 1000);
-        document.getElementById("timer").innerHTML = "Timer: " + timer + "sec";
         document.getElementById("snowballs").innerHTML = snowballsLeft + " Snowballs left";
         document.getElementById("score").innerHTML = "Score: " + Endaufgabe.score;
         document.getElementsByTagName("canvas")[0].addEventListener("click", handleMouseEvent);
@@ -59,21 +54,11 @@ var Endaufgabe;
     }
     function endScreen() {
         ended = true;
-        //  clearInterval(timercanceller);
         let scoreinput = document.getElementById("scoreinput");
         scoreinput.value = String(Endaufgabe.score);
         document.getElementById("overlay").style.display = "none";
         document.getElementById("endscreen").style.display = "block";
         document.getElementsByTagName("canvas")[0].style.display = "none";
-    }
-    function decreaseTimer() {
-        document.getElementById("timer").innerHTML = "Timer: " + timer + "sec";
-        if (timer <= 0) {
-            endScreen();
-        }
-        else {
-            timer--;
-        }
     }
     function handleMouseEvent(_e) {
         let key = _e.which;
@@ -163,19 +148,19 @@ var Endaufgabe;
         Endaufgabe.crc2.save();
         Endaufgabe.crc2.translate(750, 300);
         Endaufgabe.crc2.fill();
-        Endaufgabe.crc2.fillStyle = "#AA6633";
+        Endaufgabe.crc2.fillStyle = "brown";
         Endaufgabe.crc2.beginPath();
-        Endaufgabe.crc2.moveTo(-35, 0);
-        Endaufgabe.crc2.lineTo(-35, -83);
-        Endaufgabe.crc2.lineTo(0, -110);
-        Endaufgabe.crc2.lineTo(35, -83);
-        Endaufgabe.crc2.lineTo(35, 0);
+        Endaufgabe.crc2.moveTo(-40, 0);
+        Endaufgabe.crc2.lineTo(-40, -100);
+        Endaufgabe.crc2.lineTo(0, -150);
+        Endaufgabe.crc2.lineTo(50, -100);
+        Endaufgabe.crc2.lineTo(50, 0);
         Endaufgabe.crc2.closePath();
         Endaufgabe.crc2.fill();
-        Endaufgabe.crc2.fillStyle = "rgba(5,5,5,0.7)";
+        Endaufgabe.crc2.fillStyle = "black";
         Endaufgabe.crc2.beginPath();
         Endaufgabe.crc2.moveTo(0, -55);
-        Endaufgabe.crc2.arc(0, -55, 18, 0, Math.PI * 2);
+        Endaufgabe.crc2.arc(0, -70, 20, 0, Math.PI * 2);
         Endaufgabe.crc2.fill();
         Endaufgabe.crc2.lineWidth = 5;
         Endaufgabe.crc2.restore();

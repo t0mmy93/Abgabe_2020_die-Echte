@@ -5,7 +5,6 @@ namespace Endaufgabe {
     let imgData: ImageData;
     let fps: number = 25;
     export let score: number = 0;
-    let timer: number = 60;
     let snowFlakes: Everything[] = [];
     export let birds: Bird[] = [];
     export let snowballs: Snowball[] = [];
@@ -13,7 +12,7 @@ namespace Endaufgabe {
     export let kekse: Keks[] = [];
     let kekseLeft: number = 3;
     let ended: boolean = false;
-    //  let timercanceller: NodeJS.Timer;
+
 
     function preInit(): void {
         document.getElementById("start").addEventListener("click", init);
@@ -24,7 +23,6 @@ namespace Endaufgabe {
 
         fps = 25;
         score = 0;
-        timer = 60;
         snowFlakes = [];
         birds = [];
         snowballs = [];
@@ -37,9 +35,8 @@ namespace Endaufgabe {
         document.getElementsByTagName("canvas")[0].style.display = "block";
 
         ended = false;
-        //  timercanceller = setInterval(decreaseTimer, 1000);
 
-        document.getElementById("timer").innerHTML = "Timer: " + timer + "sec";
+
         document.getElementById("snowballs").innerHTML = snowballsLeft + " Snowballs left";
         document.getElementById("score").innerHTML = "Score: " + score;
 
@@ -64,7 +61,7 @@ namespace Endaufgabe {
             let bird: Bird = new Bird();
 
 
- 
+
             birds.push(bird);
         }
 
@@ -82,7 +79,6 @@ namespace Endaufgabe {
 
     function endScreen(): void {
         ended = true;
-        //  clearInterval(timercanceller);
         let scoreinput: HTMLInputElement = document.getElementById("scoreinput") as HTMLInputElement;
         scoreinput.value = String(score);
         document.getElementById("overlay").style.display = "none";
@@ -90,15 +86,7 @@ namespace Endaufgabe {
         document.getElementsByTagName("canvas")[0].style.display = "none";
     }
 
-    function decreaseTimer(): void {
 
-        document.getElementById("timer").innerHTML = "Timer: " + timer + "sec";
-        if (timer <= 0) {
-            endScreen();
-        } else {
-            timer--;
-        }
-    }
 
     function handleMouseEvent(_e: MouseEvent): void {
         let key: number = _e.which;
@@ -206,19 +194,19 @@ namespace Endaufgabe {
         crc2.translate(750, 300);
 
         crc2.fill();
-        crc2.fillStyle = "#AA6633";
+        crc2.fillStyle = "brown";
         crc2.beginPath();
-        crc2.moveTo(-35, 0);
-        crc2.lineTo(-35, -83);
-        crc2.lineTo(0, -110);
-        crc2.lineTo(35, -83);
-        crc2.lineTo(35, 0);
+        crc2.moveTo(-40, 0);
+        crc2.lineTo(-40, -100);
+        crc2.lineTo(0, -150);
+        crc2.lineTo(50, -100);
+        crc2.lineTo(50, 0);
         crc2.closePath();
         crc2.fill();
-        crc2.fillStyle = "rgba(5,5,5,0.7)";
+        crc2.fillStyle = "black";
         crc2.beginPath();
         crc2.moveTo(0, -55);
-        crc2.arc(0, -55, 18, 0, Math.PI * 2);
+        crc2.arc(0, -70, 20, 0, Math.PI * 2);
         crc2.fill();
         crc2.lineWidth = 5;
         crc2.restore();
