@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="Main.js" type="text/javascript" charset="utf-8"></script>
+<script src="Classes/Everything.js" type="text/javascript" charset="utf-8"></script>
+<script src="Classes/Moving.js" type="text/javascript" charset="utf-8"></script>
+<script src="Classes/Tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="Classes/SnowFlakes.js" type="text/javascript" charset="utf-8"></script>
+<script src="Classes/bird.js" type="text/javascript" charset="utf-8"></script>
+<script src="Classes/Snowball.js" type="text/javascript" charset="utf-8"></script>
+<script src="Client/DatabaseClient.js" type="text/javascript" charset="utf-8"></script>
+
+<title>Abschluss Aufgabe</title>
+</head>
+<body oncontextmenu="return false">
+	
+	<div id="startScreen">
+		
+		<h1>Mohrhuhn(Besser als das Original)</h1>
+		<h3>Treffe soviele Voegel wie moeglich.</h3>
+		<button id="start">start</button>	
+	</div>
+	
+	<div id="overlay">
+		<p id="score"></p>
+		<p id="snowballs"></p>
+		<p id="timer"></p>
+	</div>
+	
+	<div id="endscreen">
+		<fieldset id="input">
+			<legend> Type Playername </legend>
+			<input type="text" name="name" placeholder="name" id="name" />
+			<input type="hidden" name="score" id="scoreinput" />
+			<button type="button" id="insert">Insert to database</button>
+		</fieldset>
+		<fieldset id="output">
+			<legend> All student data </legend>
+			<button type="button" id="restart">Restart</button>
+			<textarea rows="20" cols="90"> </textarea>
+			
+			<button type="button" id="find">Highscore</button>
+		</fieldset>
+	
+	</div>
+	<canvas width=820 height=840></canvas>
+
+</body>
+</html>
