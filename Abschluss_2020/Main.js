@@ -12,7 +12,7 @@ var Endaufgabe;
     Endaufgabe.kekse = [];
     let kekseLeft = 3;
     let ended = false;
-    let timercanceller;
+    //  let timercanceller: NodeJS.Timer;
     function preInit() {
         document.getElementById("start").addEventListener("click", init);
         document.getElementById("restart").addEventListener("click", init);
@@ -59,7 +59,7 @@ var Endaufgabe;
     }
     function endScreen() {
         ended = true;
-        clearInterval(timercanceller);
+        //  clearInterval(timercanceller);
         let scoreinput = document.getElementById("scoreinput");
         scoreinput.value = String(Endaufgabe.score);
         document.getElementById("overlay").style.display = "none";

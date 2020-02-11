@@ -5,27 +5,6 @@ var Endaufgabe;
             super();
             this.updatesTillImpact = 10;
         }
-        /*   hasHit(sarah: Bird): boolean {
-   
-               if (sarah.x - 25 < this.x - 20) {
-                   // Sarah left of snowball
-                   return false;
-               }
-               if (sarah.x - 25 > this.x + 20) {
-                   // Sarah right of snowball
-                   return false;
-               }
-               if (sarah.y + 20 < this.y - 20) {
-                   // Sarah over of snowball
-                   return false;
-               }
-               if (sarah.y + 20 > this.y + 20) {
-                   // Sarah under of snowball
-                   return false;
-               }
-   
-               return true;
-           }*/
         move() {
             this.updatesTillImpact--;
             if (this.updatesTillImpact == 0) {
@@ -33,7 +12,6 @@ var Endaufgabe;
                     if (this == Endaufgabe.kekse[i])
                         Endaufgabe.snowballs.splice(i, 1);
                 }
-                //  this.detectHit();
             }
         }
         draw() {

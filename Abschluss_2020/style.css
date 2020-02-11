@@ -1,5 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css?family=Orbitron|Staatliches'); */
-
 legend {
 	color: black;
 	font-family: 'Orbitron', cursive;
@@ -43,11 +41,9 @@ legend {
 }
 
 #endscreen {
-	width: 80%;
-	height: 700px;
-	/*background: no-repeat center url(Terminator.jpg);  */
-	/*background-size: cover; */	
-}
+	width: 90%;
+	height: 800px;
+	}
 
 #score {
 	color: black;
@@ -72,7 +68,6 @@ legend {
 #startScreen {
 	width: 100%;
 	height: 1000px;
-	/*background: no-repeat center url(Terminator.jpg);*/
 	background-size: cover;
 }
 
