@@ -28,7 +28,7 @@ var Endaufgabe;
             Endaufgabe.crc2.closePath();
             Endaufgabe.crc2.fill();
             Endaufgabe.crc2.stroke();
-            Endaufgabe.crc2.fillStyle = "#008000";
+            Endaufgabe.crc2.fillStyle = "green";
             Endaufgabe.crc2.strokeStyle = "#004d00";
             Endaufgabe.crc2.lineWidth = 1;
             Endaufgabe.crc2.beginPath();
@@ -38,16 +38,9 @@ var Endaufgabe;
             Endaufgabe.crc2.closePath();
             Endaufgabe.crc2.fill();
             Endaufgabe.crc2.stroke();
-            Endaufgabe.crc2.fillStyle = "#008000";
+            Endaufgabe.crc2.fillStyle = "green";
             Endaufgabe.crc2.strokeStyle = "#004d00";
             Endaufgabe.crc2.lineWidth = 1;
-            Endaufgabe.crc2.beginPath();
-            Endaufgabe.crc2.moveTo(this.x - 24, this.y - 42);
-            Endaufgabe.crc2.lineTo(this.x, this.y - 95);
-            Endaufgabe.crc2.lineTo(this.x + 24, this.y - 42);
-            Endaufgabe.crc2.closePath();
-            Endaufgabe.crc2.fill();
-            Endaufgabe.crc2.stroke();
         }
     }
     Endaufgabe.Tree = Tree;
